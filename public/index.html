@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coupon Matching</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="styles/materialize.css">
+    <!--    <link rel="stylesheet" type="text/css" href="styles/materialize.min.css">-->
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+    <link rel="manifest" href="styles/manifest.json">
+
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Coupon Matching">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+
+    <!-- Windows -->
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <link rel="icon"
+          type="image/png"
+          href="images/icons/icon-144x144.png">
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper blue darken-5">
+            <a href="#" class="brand-logo left">Coupon Matching</a>
+            <button id="butRefresh" class="nav-wrapper btn_refresh btn-flat waves-effect waves-light right"
+                    aria-label="Refresh"></button>
+        </div>
+    </nav>
+</div>
+
+<main class="container">
+    <div class="col s12 m7">
+        <div class="card">
+            <div class="card-title">Your Coupons</div>
+            <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#today">TODAY</a></li>
+                    <li class="tab"><a href="#nextDays">NEXT DAYS</a></li>
+                </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+                <div id="today">
+                    <div id="coupons_today">
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle brown">local_cafe</i>
+                                <span class="title">COFFEE</span>
+                                <p>
+                                    {{ this.cafe }} coupon(s)
+                                </p>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle blue">local_drink</i>
+                                <span class="title">BEVERAGE</span>
+                                <p>
+                                    {{ this.beverage }} coupon(s)
+                                </p>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle green">cake</i>
+                                <span class="title">PASTRY</span>
+                                <p>
+                                    {{ this.cake }} coupon(s)
+                                </p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div id="nextDays">
+                    <div id="coupons_nextDays">
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle brown">local_cafe</i>
+                                <span class="title">COFFEE</span>
+                                <p>
+                                    {{ this.cafe }} coupon(s)
+                                </p>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle blue">local_drink</i>
+                                <span class="title">BEVERAGE</span>
+                                <p>
+                                    {{ this.beverage }} coupon(s)
+                                </p>
+                            </li>
+                            <li class="collection-item avatar">
+                                <i class="material-icons circle green">cake</i>
+                                <span class="title">PASTRY</span>
+                                <p>
+                                    {{ this.cake }} coupon(s)
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m7">
+        <div class="card">
+            <div class="card-title">Settings</div>
+            <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#offers">OFFERS</a></li>
+                    <li class="tab"><a href="#wishes">WISHES</a></li>
+                </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+                <div id="offers">
+                    <ul class="collection">
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle brown">local_cafe</i>
+                            <span class="title">COFFEE</span>
+                            <p>1 coupon(s)</p>
+
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle blue">local_drink</i>
+                            <span class="title">BEVERAGE</span>
+                            <p>1 coupon(s)</p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle green">cake</i>
+                            <span class="title">PASTRY</span>
+                            <p>1 coupon(s)</p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="wishes">
+                    <ul class="collection">
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle brown">local_cafe</i>
+                            <span class="title">COFFEE</span>
+                            <form action="#">
+                                <p>
+                                    <label>
+                                        <input name="group1" type="radio" checked/>
+                                        <span>YES</span>
+                                    </label>
+                                    <label>
+                                        <input name="group1" type="radio"/>
+                                        <span>NO</span>
+                                    </label>
+                                </p>
+                            </form>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle blue">local_drink</i>
+                            <span class="title">BEVERAGE</span>
+                            <form action="#">
+                                <p>
+                                    <label>
+                                        <input name="group1" type="radio" checked/>
+                                        <span>YES</span>
+                                    </label>
+                                    <label>
+                                        <input name="group1" type="radio"/>
+                                        <span>NO</span>
+                                    </label>
+                                </p>
+                            </form>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle green">cake</i>
+                            <span class="title">PASTRY</span>
+                            <form action="#">
+                                <p>
+                                    <label>
+                                        <input name="group1" type="radio" checked/>
+                                        <span>YES</span>
+                                    </label>
+                                    <label>
+                                        <input name="group1" type="radio"/>
+                                        <span>NO</span>
+                                    </label>
+                                </p>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large waves-effect waves-light red">
+            <i class="large material-icons">add</i>
+        </a>
+        <ul>
+            <li><a id="addCafe" class="btn-floating waves-effect waves-light brown modal-trigger" href="#addDialog"><i
+                    class="material-icons">local_cafe</i></a></li>
+            <li><a id="addBeverage" class="btn-floating waves-effect waves-light blue modal-trigger"
+                   href="#addDialog"><i
+                    class="material-icons">local_drink</i></a></li>
+            <li><a id="addPastry" class="btn-floating waves-effect waves-light green modal-trigger" href="#addDialog"><i
+                    class="material-icons">cake</i></a></li>
+        </ul>
+    </div>
+
+    <div id="addDialog" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h3>Create Offer</h3>
+            <p class="left-align">Coupon Type
+            <div class="input-field col s12">
+                <select id="selectOptions">
+                    <!--<option value="" disabled selected>Choose your option</option>-->
+                    <option id="option1" value="1">Coffee</option>
+                    <option id="option2" value="2">Beverage</option>
+                    <option id="option3" value="3">Pastry</option>
+                </select>
+            </div>
+            </p>
+            <p class="left-align">Expire Date
+                <input type="text" class="datepicker">
+            </p>
+
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Save</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Discard</a>
+        </div>
+    </div>
+
+</main>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+
+<script type="text/javascript" src="scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="scripts/materialize.js"></script>
+<script type="text/javascript" src="scripts/vue.js"></script>
+<!--<script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="scripts/materialize.min.js"></script>
+<script type="text/javascript" src="scripts/vue.min.js"></script>-->
+<script type="text/javascript" src="scripts/app.js"></script>
+
+</body>
+</html>

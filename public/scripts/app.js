@@ -11,8 +11,9 @@
     }
 
     // firestore, firebase
+    Vue.use(VueFirestore);
     var config = {
-        apiKey: "",
+        apiKey: "AIzaSyAd-4xN4D6R41psL1MEcjnK9nH_TnAFn-c",
         authDomain: "university-coupon-matching.firebaseapp.com",
         databaseURL: "https://university-coupon-matching.firebaseio.com",
         projectId: "university-coupon-matching",
@@ -23,7 +24,7 @@
     firestore.settings(settings);
 
     // get data from datapase
-    var coupons_today = new Vue({
+    new Vue({
         el: '#coupons_today',
         data() {
             return {
@@ -49,7 +50,7 @@
         }
     });
 
-    var coupons_nextDays = new Vue({
+    new Vue({
         el: '#coupons_nextDays',
         data() {
             return {
@@ -72,6 +73,48 @@
                 }).catch(error => {
                 console.log('Error: ' + error)
             })
+        }
+    });
+
+    new Vue({
+        el: '#wishes',
+        data() {
+            return {
+                cafe: null,
+                cake: null,
+                beverage: null,
+            }
+        },
+        created() {
+            firebase.firestore().collection('coupons').doc("wishes").get()
+                .then(doc => {
+                    if (doc) {
+                        var data = doc.data()
+                        this.cafe = data.cafe
+                        this.cake = data.cake
+                        this.beverage = data.beverage
+                    } else {
+                        console.log('No document exists')
+                    }
+                }).catch(error => {
+                console.log('Error: ' + error)
+            })
+        },
+        methods: {
+            update: function(){
+                firebase.firestore().collection("coupons").doc("wishes").update({
+                    cafe: this.cafe,
+                    cake: this.cake,
+                    beverage: this.beverage,
+                })
+                    .then(function () {
+                        console.log("Document successfully updated!");
+                    })
+                    .catch(function (error) {
+                        // The document probably doesn't exist.
+                        console.error("Error updating document: ", error);
+                    });
+            }
         }
     });
 

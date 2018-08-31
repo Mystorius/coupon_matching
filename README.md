@@ -1,12 +1,21 @@
 # Coupon Matching as Progressive Web App (PWA)
 Lorem ipsum dolor sit amet, justo ignota nec eu. Probatus nominati ut nec, ei adipisci assentior his. Cu vis periculis mnesarchum, et mel tation virtute consequat. Posse propriae delicatissimi est te. Duo no accumsan petentium tincidunt, has id reprimique reprehendunt.
 
+
+
+
 ## What's included
 ```
+│   .firebaserc
+│   .gitattributes
 │   database.rules.json
+│   Documentation.md
 │   firebase.json
-│   MIT-LICENSE
+│   MIT-LICENSE.md
+│   README.md
+│
 ├───.firebase
+│       hosting.cHVibGlj.cache
 └───public
     │   index.html
     │   manifest.json
@@ -53,6 +62,7 @@ Lorem ipsum dolor sit amet, justo ignota nec eu. Probatus nominati ut nec, ei ad
             materialize.css
             materialize.min.css
             style.css
+
 ```
 
 ## Documentation

@@ -11,18 +11,29 @@ var filesToCache = [
     "./fonts/roboto/Roboto-Regular.woff2",
     "./fonts/roboto/Roboto-Thin.woff",
     "./fonts/roboto/Roboto-Thin.woff2",
-    "./images/icons/icon-128x128.png",
-    "./images/icons/icon-144x144.png",
-    "./images/icons/icon-152x152.png",
-    "./images/icons/icon-192x192.png",
-    "./images/icons/icon-256x256.png",
+    "./images/icons/Icon-36.png",
+    "./images/icons/Icon-48.png",
+    "./images/icons/Icon-72.png",
+    "./images/icons/Icon-96.png",
+    "./images/icons/Icon-144.png",
+    "./images/icons/Icon-192.png",
+    "./images/icons/Icon-512.png",
     "./images/ic_refresh_white_24px.svg",
+    "./scripts/firebase-app.js",
+    "./scripts/firebase-firestore.js",
+    "./scripts/vue-firestore.js",
     "./scripts/app.js",
-    "./scripts/vue.js",
+   /* "./scripts/vue.js",
     "./scripts/jquery-3.3.1.js",
     "./scripts/materialize.js",
     "./styles/materialize.css",
+    "./styles/style.css",*/
+    "./scripts/vue.min.js",
+    "./scripts/jquery-3.3.1.min.js",
+    "./scripts/materialize.min.js",
+    "./styles/materialize.min.css",
     "./styles/style.css",
+    "./styles/manifest.json",
 ];
 
 self.addEventListener('install', event => {
@@ -46,7 +57,6 @@ self.addEventListener('fetch', event => {
                 }
                 console.log('Network request for ', event.request.url);
                 return fetch(event.request)
-
                     .then(response => {
                         // TODO - Respond with custom 404 page
                         return caches.open(cacheName).then(cache => {
@@ -55,27 +65,24 @@ self.addEventListener('fetch', event => {
                             return response;
                         });
                     });
-
             }).catch(error => {
             // TODO - Respond with custom offline page
-                console.log("offline error", error);
-
+            console.log("offline error", error);
         })
     );
 });
 
-self.addEventListener('activate', event => {
-    console.log('Activating new service worker...');
 
-    const cacheWhitelist = [cacheName];
-
+self.addEventListener('activate', function (event) {
     event.waitUntil(
-        caches.keys().then(cacheNames => {
+        caches.keys().then(function (cacheNames) {
             return Promise.all(
-                cacheNames.map(cacheName => {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
-                        return caches.delete(cacheName);
-                    }
+                cacheNames.filter(function (cacheName) {
+                    // Return true if you want to remove this cache,
+                    // but remember that caches are shared across
+                    // the whole origin
+                }).map(function (cacheName) {
+                    return caches.delete(cacheName);
                 })
             );
         })

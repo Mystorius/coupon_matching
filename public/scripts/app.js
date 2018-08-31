@@ -1,14 +1,32 @@
 (function () {
     'use strict';
 
-    // register service worker
+    // initialization
+    $(document).ready(function () {
+        M.AutoInit();
+        $('.fixed-action-btn').floatingActionButton({
+            hoverEnabled: false
+        });
+        $('.datepicker').datepicker({
+            autoClose: true
+        });
+    });
+
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('./service-worker.js')
-            .then(function () {
-                console.log('Service Worker Registered');
-            });
+        navigator.serviceWorker.register('./service-worker.js').then(function (registration) {
+            // registration worked
+            console.log('Registration succeeded.');
+            document.getElementById('butRefresh').onclick = function () {
+                console.log("but clicked");
+                registration.update();
+                // TODO -- refresh data only from service worker + get new from server
+            };
+        }).catch(function (error) {
+            // registration failed
+            console.log('Registration failed with ' + error);
+        });
     }
+    ;
 
     // firestore, firebase
     Vue.use(VueFirestore);
@@ -34,7 +52,7 @@
             }
         },
         created() {
-            firebase.firestore().collection('coupons').doc("coupons_today").get()
+            firestore.collection('coupons').doc("coupons_today").get()
                 .then(doc => {
                     if (doc) {
                         var data = doc.data()
@@ -60,7 +78,7 @@
             }
         },
         created() {
-            firebase.firestore().collection('coupons').doc("coupons_nextDays").get()
+            firestore.collection('coupons').doc("coupons_nextDays").get()
                 .then(doc => {
                     if (doc) {
                         var data = doc.data()
@@ -86,7 +104,7 @@
             }
         },
         created() {
-            firebase.firestore().collection('coupons').doc("wishes").get()
+            firestore.collection('coupons').doc("wishes").get()
                 .then(doc => {
                     if (doc) {
                         var data = doc.data()
@@ -101,8 +119,8 @@
             })
         },
         methods: {
-            update: function(){
-                firebase.firestore().collection("coupons").doc("wishes").update({
+            update: function () {
+                firestore.collection("coupons").doc("wishes").update({
                     cafe: this.cafe,
                     cake: this.cake,
                     beverage: this.beverage,
@@ -121,23 +139,6 @@
     var app = {
         addDialog: document.getElementById('addDialog')
     };
-
-    // initialization
-    $(document).ready(function () {
-        M.AutoInit();
-        $('.fixed-action-btn').floatingActionButton({
-            hoverEnabled: false
-        });
-        $('.datepicker').datepicker({
-            autoClose: true
-        });
-    });
-
-    // add some event listeners
-    document.getElementById('butRefresh').addEventListener('click', function () {
-        console.log("but clicked");
-        // TODO -- refresh data only from service worker
-    });
 
     // add click functions
     $('#addCafe').click(function () {

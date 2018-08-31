@@ -1,4 +1,4 @@
-var cacheName = 'university-coupon-matching-v2';
+var cacheName = 'university-coupon-matching-v3';
 var filesToCache = [
     "./index.html",
     "./fonts/roboto/Roboto-Bold.woff",
@@ -33,7 +33,7 @@ var filesToCache = [
     "./scripts/materialize.min.js",
     "./styles/materialize.min.css",
     "./styles/style.css",
-    "./styles/manifest.json",
+    "./manifest.json"
 ];
 
 self.addEventListener('install', event => {

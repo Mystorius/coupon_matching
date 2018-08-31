@@ -35,6 +35,8 @@
         authDomain: "university-coupon-matching.firebaseapp.com",
         databaseURL: "https://university-coupon-matching.firebaseio.com",
         projectId: "university-coupon-matching",
+        storageBucket: "university-coupon-matching.appspot.com",
+        messagingSenderId: "693279493028"
     };
     firebase.initializeApp(config);
     const firestore = firebase.firestore();

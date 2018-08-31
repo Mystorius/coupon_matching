@@ -27,7 +27,7 @@ Lorem ipsum dolor sit amet, justo ignota nec eu. Probatus nominati ut nec, ei ad
 - [JQuery](https://jquery.com/) A library for supporting quick and easy javascipt
 - [materialize.js](https://materializecss.com/) materialize.js and materialize-css for styling
 - [public/service-worker.js](public/service-worker.js) caching the app's files for quick local access
-- [public/manifest.json](public/styles/manifest.json) specifier for how the app looks on home screen, how it can be opened, etc..
+- [public/manifest.json](public/manifest.json) specifier for how the app looks on home screen, how it can be opened, etc..
 
 ## Hosting
 - Hosted on google firebase

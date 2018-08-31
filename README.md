@@ -54,6 +54,10 @@ Lorem ipsum dolor sit amet, justo ignota nec eu. Probatus nominati ut nec, ei ad
             materialize.min.css
             style.css
 ```
+
+## Documentation
+You can find the code documentation at [Documentation.md](Documentation.md) 
+
 ## Incorporated
 - [JQuery](https://jquery.com/) A library for supporting quick and easy javascipt
 - [materialize.js](https://materializecss.com/) materialize.js and materialize.css for styling
@@ -67,5 +71,9 @@ Lorem ipsum dolor sit amet, justo ignota nec eu. Probatus nominati ut nec, ei ad
 - [Your First Progressive Web App - Google Developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/)
 - [Progressive Web App](https://ryanwhocodes.github.io/template-progressive-web-app/)
 
+## License
+This project is licensed under the MIT License - see the [MIT-LICENSE.md](MIT-LICENSE.md) file for details
+
 ## Author
 - Benjamin Pohl
+

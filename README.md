@@ -1,16 +1,20 @@
 # Coupon Matching as Progressive Web App (PWA)
 Term paper for the course TM70303 Grundlagen Web Engineering.
 <br><br>
-Link to GitHub repository: https://github.com/Mystorius/coupon_matching
-<br>
-Link to App hosted on google firebase: https://university-coupon-matching.firebaseapp.com/
+[Link to GitHub repository](https://github.com/Mystorius/coupon_matching):
+- https://github.com/Mystorius/coupon_matching
+<p>
+
+[Link to PWA hosted on google firebase](https://university-coupon-matching.firebaseapp.com/):
+- https://university-coupon-matching.firebaseapp.com/
 
 ## Concept and Idea
-The Idea was to build an coupon matching progress for the mannheim cas-coupon given to students.
+The Idea was to build an coupon matching web app for the Mannheim CAS coupons given to students.
 <br><br>
 Each student gets three coupons for each day visiting lectures. One for coffee, one for a beverage and one for pastry of his choice.
 Coupons can only be redeemed  by a Coffee-Shop nearby [Agata café and roastery](https://www.agata-kaffee.de/).
-Each coupon is only valid for one day. Critically, coupons are not interchangeable. You are not allowed to exchange a coffee coupon for a beverage one.
+Each coupon is only valid for one day. Critically, coupons are not interchangeable by the Coffee-Shop.
+You are not allowed to exchange a coffee coupon for a beverage one.
 But students have different preferences. One dislikes coffee, the other prefers a pastry over a beverage.   
 <br><br> 
 Hence the Idea to build an web app where students can upload their existing coupons and submit their preferences.
@@ -44,7 +48,7 @@ icons, you can eliminate the dependence on the network and ensuring an instant a
 #### Fast
 According to Google and DoubleClick AdExchange [statistics](https://developer.akamai.com/blog/2016/09/14/mobile-load-time-user-abandonment),
 "3% of mobile users abandon sites that take longer than 3 seconds to load". And once loaded, users expect them to be
-fast—no janky scrolling or slow-to-respond interfaces.
+fast, no janky scrolling or witch slow-to-respond interfaces.
 
 #### Engaging
 Progressive Web Apps are installable (with an "add to home screen pop up) and live on the user's home screen (looking just like an app),
@@ -102,6 +106,20 @@ will match both pools
 - Matching algorithm
 - removing the all listed *limitations*
 - so much more...
+
+## Screenshots
+Link to PWA screenshots:
+- Mobile
+    - [Overview](https://snag.gy/wi16Pt.jpg) - https://snag.gy/wi16Pt.jpg
+    - [Wish selection](https://snag.gy/6zyfJe.jpg) - https://snag.gy/6zyfJe.jpg
+    - [Creating coupon](https://snag.gy/0VYRS7.jpg) - https://snag.gy/0VYRS7.jpg
+    - [Calendar view](https://snag.gy/nUDzM2.jpg) - https://snag.gy/nUDzM2.jpg
+- Desktop
+    - [Overview](https://snag.gy/vl74G2.jpg) - https://snag.gy/vl74G2.jpg
+    - [Wish selection](https://snag.gy/vl74G2.jpg) - https://snag.gy/vl74G2.jpg
+    - [Creating coupon](https://snag.gy/P45Tra.jpg) - https://snag.gy/P45Tra.jpg
+    - [Calendar view](https://snag.gy/nUDzM2.jpg) - https://snag.gy/nUDzM2.jpg
+
 
 ## What's included
 ```

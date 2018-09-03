@@ -118,7 +118,7 @@ Link to PWA screenshots:
     - [Overview](https://snag.gy/vl74G2.jpg) - https://snag.gy/vl74G2.jpg
     - [Wish selection](https://snag.gy/vl74G2.jpg) - https://snag.gy/vl74G2.jpg
     - [Creating coupon](https://snag.gy/P45Tra.jpg) - https://snag.gy/P45Tra.jpg
-    - [Calendar view](https://snag.gy/nUDzM2.jpg) - https://snag.gy/nUDzM2.jpg
+    - [Calendar view](https://snag.gy/iNxte0.jpg) - https://snag.gy/iNxte0.jpg
 
 
 ## What's included

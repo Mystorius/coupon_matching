@@ -1,5 +1,9 @@
 # Coupon Matching as Progressive Web App (PWA)
-Lorem ipsum dolor sit amet, justo ignota nec eu. Probatus nominati ut nec, ei adipisci assentior his. Cu vis periculis mnesarchum, et mel tation virtute consequat. Posse propriae delicatissimi est te. Duo no accumsan petentium tincidunt, has id reprimique reprehendunt.
+Term paper for the course TM70303 Grundlagen Web Engineering.
+<br><br>
+Link to GitHub repository: https://github.com/Mystorius/coupon_matching
+<br>
+Link to App hosted on google firebase: https://university-coupon-matching.firebaseapp.com/
 
 ## Concept and Idea
 The Idea was to build an coupon matching progress for the mannheim cas-coupon given to students.
@@ -87,6 +91,17 @@ the matching. The back-end architecture would ideally be the following:
 - A matching algorithm following the [stable marriage problem](https://arxiv.org/ftp/arxiv/papers/1608/1608.07575.pdf)
 and the [hospitals / residents problem](https://pdfs.semanticscholar.org/77d9/f84082674888ca90ca662847983381b23338.pdf?_ga=2.154836731.2131887508.1535974286-2007767658.15359742860)
 will match both pools
+
+### Things to do
+- User authentication mechanism 
+- Improvement on the service worker caching:
+    - serve custom 404 page
+    - serve offline banner
+    - serve last saved state while 404
+    - ...
+- Matching algorithm
+- removing the all listed *limitations*
+- so much more...
 
 ## What's included
 ```

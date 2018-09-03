@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5fc4ca5-37e8-489a-887c-0f0daa1ae081" name="Default Changelist" comment="more concept">
+    <list default="true" id="f5fc4ca5-37e8-489a-887c-0f0daa1ae081" name="Default Changelist" comment="final commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles/materialize.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/styles/materialize.min.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -116,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="materialize.min.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="materialize.min.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/styles/materialize.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="30" column="836" selection-start-line="30" selection-start-column="836" selection-end-line="30" selection-end-column="836" />
+            <state relative-caret-position="609">
+              <caret line="30" column="4961" lean-forward="true" selection-start-line="30" selection-start-column="4961" selection-end-line="30" selection-end-column="4961" />
             </state>
           </provider>
         </entry>
@@ -138,13 +137,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="597">
-                <caret line="119" column="80" selection-start-line="119" selection-start-column="80" selection-end-line="119" selection-end-column="80" />
+              <first_editor relative-caret-position="411">
+                <caret line="187" lean-forward="true" selection-start-line="187" selection-end-line="187" />
               </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Documentation.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Documentation.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
               <second_editor />
             </state>
           </provider>
@@ -166,7 +175,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>./images</find>
       <find>but cl</find>
       <find>vue</find>
       <find>Vue.us</find>
@@ -181,7 +189,6 @@
       <find>open</find>
       <find>datepicker-modal</find>
       <find>.modal.modal-fixed-footer .modal-content</find>
-      <find>3 sec</find>
       <find>width: 992</find>
       <find>@media only screen and (max-width: 992px)</find>
       <find>@media only screen and (max-width: 992px){.moda</find>
@@ -190,12 +197,14 @@
       <find>width: 500px</find>
       <find>width:500px</find>
       <find>min-width: 300px</find>
-      <find>.datepicker-modal{</find>
       <find>.datepicker-modal {</find>
       <find>http://localhost:63342/coupon_matching/public/index.html?_ijt=gb74t2j4e7qaualj37oifl3d73</find>
       <find>.modal.modal-fixed-footer .modal-content {</find>
       <find>.modal.modal-fixed-</find>
       <find>min-width</find>
+      <find>.datepicker-modal{</find>
+      <find>3 sec</find>
+      <find>br</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -217,9 +226,9 @@
         <option value="$PROJECT_DIR$/public/scripts/app.js" />
         <option value="$PROJECT_DIR$/public/service-worker.js" />
         <option value="$PROJECT_DIR$/MIT-LICENSE.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/public/styles/materialize.css" />
         <option value="$PROJECT_DIR$/public/styles/materialize.min.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -347,7 +356,7 @@
       <workItem from="1533406204880" duration="4344000" />
       <workItem from="1533583265568" duration="3855000" />
       <workItem from="1533671600749" duration="6916000" />
-      <workItem from="1535956827775" duration="12755000" />
+      <workItem from="1535956827775" duration="14687000" />
     </task>
     <task id="LOCAL-00001" summary="some update to read-me etc.">
       <created>1533583376724</created>
@@ -447,11 +456,25 @@
       <option name="project" value="LOCAL" />
       <updated>1535975537314</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fixed calender with">
+      <created>1535978738499</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1535978738499</updated>
+    </task>
+    <task id="LOCAL-00016" summary="final commit">
+      <created>1535978808472</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1535978808472</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51278000" />
+    <option name="totallyTimeSpent" value="53210000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="15" width="1696" height="1026" extended-state="6" />
@@ -521,7 +544,9 @@
     <MESSAGE value="changed license" />
     <MESSAGE value="finished concept idea and implementation" />
     <MESSAGE value="more concept" />
-    <option name="LAST_COMMIT_MESSAGE" value="more concept" />
+    <MESSAGE value="fixed calender with" />
+    <MESSAGE value="final commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="final commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -529,14 +554,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/images/icons/icon-256x256.png" />
     <entry file="file://$PROJECT_DIR$/public/images/icons/icon-128x128.png" />
     <entry file="file://$PROJECT_DIR$/public/images/icons/icon-144x144.png" />
@@ -761,12 +778,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/public/styles/materialize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="8820" selection-start-line="8820" selection-end-line="8820" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/materialize.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="30" column="4961" lean-forward="true" selection-start-line="30" selection-start-column="4961" selection-end-line="30" selection-end-column="4961" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Documentation.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="597">
-            <caret line="119" column="80" selection-start-line="119" selection-start-column="80" selection-end-line="119" selection-end-column="80" />
-          </first_editor>
+          <first_editor />
           <second_editor />
         </state>
       </provider>
@@ -792,17 +821,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/materialize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="8820" selection-start-line="8820" selection-end-line="8820" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/styles/materialize.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="30" column="836" selection-start-line="30" selection-start-column="836" selection-end-line="30" selection-end-column="836" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="411">
+            <caret line="187" lean-forward="true" selection-start-line="187" selection-end-line="187" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

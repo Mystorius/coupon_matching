@@ -1,22 +1,24 @@
 # Coupon Matching as Progressive Web App (PWA)
-Term paper for the course TM70303 Grundlagen Web Engineering.
-<br><br>
+Term paper for the course TM70303 Grundlagen Web Engineering.  
+
 [Link to GitHub repository](https://github.com/Mystorius/coupon_matching):
 - https://github.com/Mystorius/coupon_matching
-<p>
-
+  
 [Link to PWA hosted on google firebase](https://university-coupon-matching.firebaseapp.com/):
 - https://university-coupon-matching.firebaseapp.com/
 
+[Link to drag-and-drop concept](http://jsfiddle.net/60wv8xqp/73/)
+- http://jsfiddle.net/60wv8xqp/73/
+
 ## Concept and Idea
-The Idea was to build an coupon matching web app for the Mannheim CAS coupons given to students.
-<br><br>
+The Idea was to build an coupon matching web app for the Mannheim CAS coupons given to students.  
+
 Each student gets three coupons for each day visiting lectures. One for coffee, one for a beverage and one for pastry of his choice.
 Coupons can only be redeemed  by a Coffee-Shop nearby [Agata café and roastery](https://www.agata-kaffee.de/).
 Each coupon is only valid for one day. Critically, coupons are not interchangeable by the Coffee-Shop.
 You are not allowed to exchange a coffee coupon for a beverage one.
-But students have different preferences. One dislikes coffee, the other prefers a pastry over a beverage.   
-<br><br> 
+But students have different preferences. One dislikes coffee, the other prefers a pastry over a beverage.  
+ 
 Hence the Idea to build an web app where students can upload their existing coupons and submit their preferences.
 In the backend, an algorithm will match offer to desired preference and automatically exchange the coupons.
 
@@ -40,7 +42,7 @@ When launched from the user’s home screen, service workers enable a Progressiv
 the network state. This is particular useful with "not so reliable" DHBW W-Lan. One can add their coupon and submit their preferences
 regardless of their network state and once connection to the internet (back end) is available, the service worker will exchange
 the data without any user-interaction necessary. Also, redeeming of already exchanged coupons, will be available offline.  
-<br><br>
+
 A service worker, written in JavaScript, is like a client-side proxy and enables to serve the desired cache regarding the
 current network state. For example with pre-caching key resources like the app-shell, default placeholder values and images /
 icons, you can eliminate the dependence on the network and ensuring an instant and reliable, app-like feeling.
@@ -76,8 +78,8 @@ and remove the coupon from the database. This feature is not implemented yet.
 This view displays the users offers and settings to choose wishes. The offers coupon coupon count depends on how may coupons 
 a user created / uploaded. A new coupon can be created by clicking the floating *plus* button on the lower right. A user 
 can then choose the coupon type and the expire date of the coupon and either upload it onto the database with *save* or cancel
-the operation with *discard*.
-<br><br>
+the operation with *discard*.  
+
 The wishes tab displays the users preferences for the matching algorithm. The default value is null so if the user firs uploads
 coupons the won't all get *matched away* before choosing a wish. The *submit wishes* button pushes the chosen options to 
 the database.
@@ -179,6 +181,22 @@ Link to PWA screenshots:
 
 ## Documentation
 You can find the code documentation at [Documentation.md](Documentation.md) 
+
+## Drag and Drop
+Drag&Drop erlaubt es dem Nutzer auf ein Element zu klicken, dann die Maustaste gedrückt zu halten, um das Element an einen anderen Ort zu ziehen und die Maustaste dort los zu lassen, um es dort abzulegen. 
+Eine durchsichtige Darstellung des Elements, das gezogen wird, folgt dem Mauszeiger während der Durchführung.
+
+Damit ein Element per Drag&Drop bewegt werden kann, muss die Eigenschaft 'draggable' auf true gesetzt werden.
+
+Während des Drag&Drop Vorgangs werden unterschiedliche Events ausgelöst. Für ein Basisbeispiel sind drei events notwendig:
+
+- ondragstart - Wird beim Start des Zieh-Vorgangs ausgelöst und definiert die Daten welche gezogen werden.(dataTransfer.setData)
+- ondragover - Wird ausgelöst wenn ein ziehbares Element über ein gültiges Feld gezogen wird in dem es abgelegt werden kann. Über dataTransfer.dropEffect wird das visuelle Feedback, über die zugelassene Aktion, für den Nutzer definiert.
+- ondrop - Wird ausgelöst wenn ein ziehbares Element in ein gültiges Feld abgelegt wird. Über dataTransfer.getData() werden die abgelegten Daten abgerufen und können verarbeitet werden.
+
+Mittels ev.preventDefault() in den events ondragover und ondrop wird das Standardverhalten des Browsers unterdrückt. So dass z.B. Links beim Ablegen nicht geöffnet werden.
+
+
 
 ## Incorporated
 - [JQuery](https://jquery.com/) A library for supporting quick and easy javascipt
